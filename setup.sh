@@ -6,7 +6,7 @@
 
 sudo apt-get update #update all repos
 sudo apt-get -y install openvpn easy-rsa curl wget dnsutils ufw #install openvpn and easyrsa
-apt-get -y upgrade #update everything
+apt-get -y upgrade #update  
 
 #!/bin/bash
 ipvar=$(dig +short myip.opendns.com @resolver1.opendns.com) #grab our IP
@@ -14,7 +14,7 @@ echo "$ipvar"
 
 # USER INFO
 vpnclient="diyVPN" # Name of the regular config file
-vpncipher="BF-CBC" # BF-CBC AES-128-CBC AES-256-CBC
+vpncipher="AES-256-CBC" # BF-CBC AES-128-CBC AES-256-CBC
 verbosity="0"
 
 #RSA Variables
@@ -22,10 +22,10 @@ rsavars='export KEY_COUNTRY="NL"
 export KEY_PROVINCE="NH"
 export KEY_CITY="Amsterdam"
 export KEY_ORG="Anonymous"
-export KEY_EMAIL="not@available.com"
+export KEY_EMAIL="do@askmeaboutmycoolethereumhackingservices.eth"
 export KEY_OU=HQ
 export KEY_CN=openvpn
-export KEY_ALTNAMES="something"
+export KEY_ALTNAMES="v"
 export KEY_NAME=server'
 
 # compose ufw rules
