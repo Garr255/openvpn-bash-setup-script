@@ -187,3 +187,4 @@ echo $rotaterules > /etc/logrotate.d/apt-security-updates
 sudo chmod +x /etc/cron.daily/apt-security-updates
 cp /etc/openvpn/easy-rsa/keys/$vpnclient.ovpn ~
 sudo reboot
+\n
